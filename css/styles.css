@@ -1,0 +1,107 @@
+body {
+    background-color: black;
+    color: gray;
+}
+
+header, main, nav, footer {
+    text-align: center;
+}
+
+nav a{
+    padding: 15px;
+    padding-bottom: 4px;
+    font-size: 1.8em;
+    text-decoration: none;
+    color: white
+
+}
+
+nav a:hover {
+    border-bottom: 2px orange solid;
+    font-size: 2em;
+    transition: .9s;
+}
+
+/* External stylesheet: css/styles.css */
+
+/* Base styles */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #000;
+  color: #ccc;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header & Navigation */
+header {
+  text-align: center;
+  padding: 1em 0;
+}
+
+
+
+nav a.active {
+  font-weight: bold;
+  color: #f90;
+}
+
+/* Main content: flex layout for Home and other pages */
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2em;
+  padding: 2em;
+}
+
+/* Content wrapper (for About & Contact) */
+#content {
+  max-width: 600px;
+}
+
+/* Tables (About page) */
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 80%;
+}
+td {
+  border: 1px solid #fff;
+  padding: 10px;
+}
+#table-header {
+  background-color: #333;
+}
+.table-row:nth-child(even) {
+  background-color: #222;
+}
+
+/* Lists (About page) */
+ul {
+  width: 80%;
+  margin: 1em auto;
+  padding: 0;
+  text-align: left;
+}
+ul li {
+  margin: 0.5em 0;
+}
+span.hobby {
+  font-weight: bold;
+  color: #fc0;
+}
+
+/* Footer styling: smaller font & different color */
+footer {
+  text-align: center;
+  padding: 1em 0;
+  font-size: 0.8em;
+  color: #777;
+}
+footer img {
+  max-width: 80px;
+  display: block;
+  margin: 0.5em auto;
+}
