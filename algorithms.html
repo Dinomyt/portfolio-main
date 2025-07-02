@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Neng Lao: HW1</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <header>
+        <h1 style="
+          display: inline-block;
+          color: rgb(255, 255, 255);
+          border: 2px solid rgb(255, 255, 255);
+          padding: 0.25em 0.5em;
+          border-radius: 4px;
+          cursor: pointer;
+        " onclick="location.href='index.html';">
+            Neng Lao
+        </h1>
+        <hr />
+    </header>
+    <nav>
+
+        <a href="software_engineering.html">Software Engineering</a> |
+        <a href="algorithms.html">Algorithms</a> |
+        <a href="software_design.html">Software Design</a> |
+        <a href="project_management.html">Project Management</a>
+    </nav>
+
+
+    <section style="padding:1rem;">
+        <h2>1. Classic Algorithms</h2>
+        <ul>
+            <li><strong>Sorting:</strong> Quick Sort (O(n log n)), Merge Sort, Heap Sort</li>
+            <li><strong>Searching:</strong> Binary Search (O(log n)), Interpolation Search</li>
+            <li><strong>Graph:</strong> Dijkstra’s, A* for shortest paths; DFS/BFS for traversal</li>
+        </ul>
+
+        <h2>2. Hash Algorithms</h2>
+        <p>
+            Cryptographic hashes map input data to fixed‐size digests:
+        <ul>
+            <li><strong>MD5:</strong> 128-bit, fast but broken for collision resistance.</li>
+            <li><strong>SHA-1:</strong> 160-bit, also deprecated for security.</li>
+            <li><strong>SHA-256:</strong> 256-bit, industry standard for integrity checks.</li>
+        </ul>
+        </p>
+        <figure style="background:#ecf0f1; padding:0.5rem; border-radius:4px; overflow-x:auto;">
+        <pre>
+// Javascript: simple rolling hash
+function hash(s) {
+  let h = 0;
+  for (let c of s) {
+    h = ((h << 5) - h) + c.charCodeAt(0);
+    h |= 0; // convert to 32-bit
+  }
+  return h >>> 0;
+}
+        </pre>
+            <figcaption style="font-size:0.9rem; color:#7f8c8d; text-align:center;">
+                Fig.1 – Rolling hash example.
+            </figcaption>
+        </figure>
+
+        <h2>3. Performance Considerations</h2>
+        <p>
+            Always analyze <em>time complexity</em> and <em>space complexity</em> (Big-O notation).
+            Choose in-place vs. out-of-place algorithms based on memory constraints.
+        </p>
+    </section>
+
+    <footer>
+        <hr />
+        CST 336 Internet Programming. 2023 &copy; Lao <br />
+        <strong>Disclaimer:</strong> The information in this website is
+        fictitious. <br />
+        It is used for academic purposes only. <br />
+        <img src="img/csumb.png" alt="CSUMB Logo" />
+    </footer>
+</body>
+
+</html>
